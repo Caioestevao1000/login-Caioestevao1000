@@ -26,6 +26,10 @@ function salvarUser(){
 
     if(nomeUser){
         dadosListas.push(nomeUser);
-        console.log(dadosListas);
+        //console.log(dadosListas);
     }
+}
+
+function crialista(){
+    let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>"
 }
