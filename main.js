@@ -12,3 +12,20 @@ function Verify()
         window.location.href = "aula2.html";
     }
 }
+
+/*Função para criar a lista de usuários*/
+
+/*
+-->Cria o Array par amazernar os usuários
+*/
+
+var dadosListas = [];
+
+function salvarUser(){
+    let nomeUser = document.getElementById("nomeUser").value;
+
+    if(nomeUser){
+        dadosListas.push(nomeUser);
+        console.log(dadosListas);
+    }
+}
