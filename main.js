@@ -35,7 +35,18 @@ function crialista(){
     let tabela = document.getElementById("tabela").innerHTML = "<tr><th>Nome Usuário</th><th>Ações</th></tr>"
 
     for(let i=0; i <= (dadosListas.length-1); i++){
-        tabela += "<tr><td>" + dadosListas[i] + "</td><td><button class='btn btn-success' onclick=''>Editar</Button><button class='btn btn-danger' onclick=''>Excluir</button></td></tr>";
+        tabela += "<tr><td>" + dadosListas[i] + "</td><td><button class='btn btn-success' onclick='editar(this.parentNode.parentNode.rowIndex)'>Editar</Button><button class='btn btn-danger' onclick=''>Excluir</button></td></tr>";
         document.getElementById('tabela').innerHTML = tabela;
     }
 }
+
+
+//FUNÇÃO PARA EDIÇÃO DE NOME
+
+function editar(i){
+    document.getElementById("nomeUser").value = dadosListas[i - 1];
+    dadosListas.splice(dadosListas[(i - 1), 1]);
+}
+
+//FUNÇÃO PARA EXCLUIR NOME
+
